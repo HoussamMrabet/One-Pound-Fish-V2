@@ -46,7 +46,7 @@ export const ViralSection = () => {
               <video
                 id="viral-video"
                 className="w-full h-full"
-                src="/vid.mp4"
+                src="/song.mp4"
                 loop
               ></video>
             </div>
