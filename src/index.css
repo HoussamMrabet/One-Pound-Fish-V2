@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Market';
+  src: url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@400;900&display=swap');
+}
+
+@layer components {
+  .market-stall-sign {
+    @apply flex flex-col items-center p-6 bg-yellow-400 text-black rounded-lg transform hover:scale-105 transition-transform;
+  }
+  
+  .text-stroke {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+}
+
+@layer utilities {
+  .animate-float-0 { animation: float 8s infinite; }
+  .animate-float-1 { animation: float 10s infinite 1s; }
+  .animate-float-2 { animation: float 9s infinite 2s; }
+  .animate-float-3 { animation: float 11s infinite 3s; }
+  .animate-float-4 { animation: float 7s infinite 4s; }
+  .animate-float-5 { animation: float 12s infinite 5s; }
+  .animate-float-6 { animation: float 8s infinite 6s; }
+  .animate-float-7 { animation: float 10s infinite 7s; }
+  .animate-float-8 { animation: float 9s infinite 8s; }
+  .animate-float-9 { animation: float 11s infinite 9s; }
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(100px, -50px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.receipt-paper {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 28px,
+    rgba(255, 255, 255, 0.05) 28px,
+    rgba(255, 255, 255, 0.05) 29px
+  );
+}
+
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
